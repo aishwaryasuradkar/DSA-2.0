@@ -15,16 +15,16 @@ using namespace std;
 
 
 //2a.
-    int addPairs(int arr[], int n){
-        int sum=0;
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
-            sum=  arr[j]+ arr[i]; //calculate sum
-            }
+    // int addPairs(int arr[], int n){
+    //     int sum=0;
+    //     for(int i=0; i<n; i++){
+    //         for(int j=0; j<n; j++){
+    //         sum=  arr[j]+ arr[i]; //calculate sum
+    //         }
             
-        }
-        return sum ;
-    }
+    //     }
+    //     return sum ;
+    // }
 
 
 //3.FIND UNIQUE ELEMENT
@@ -60,15 +60,22 @@ using namespace std;
     // } 
 
 
-//7.
-    // void shiftArray(int arr[], int n){
-    // //step 1
-    // int temp= arr[n-1];
 
-    // //step 2
-    // for(int i=0; i<n;i++){
-    //     arr[i]= arr[i-1];
+//7. RIGHT SHIFT
+    // void shiftArray(int arr[], int n){
+    //     //step 1
+    //     int temp= arr[n-1];
+
+    //     //step 2
+    //     //shift -> arr[i] =arr[i-1]
+    //     for(int i= n-1; i>=1; i--){
+    //         arr[i]= arr[i-1];
+    //     }
+
+    //     //step-3
+    //     arr[0]= temp;
     // }
+
 
 
 //8.FIND MINIMUM NUMBER
@@ -86,9 +93,30 @@ using namespace std;
 
 
 
-//9. TRAVERTSING AN ARRAY
-    
+//9. REVERSING AN ARRAY
+    void reverseArray(int arr[], int size){
+        int left=0;
+        int right= size-1;
 
+        while(left<= right){
+
+            swap(arr[left], arr[right]);
+            left++;
+            right--;
+
+        }
+
+        // for(int left=0; right= size-1;left<= right,left++, right-- ){
+        //     swap(arr[left], arr[right]);
+        // } 
+
+        //printing array
+        for(int i=0; i<size; i++){
+            cout<< arr[i]<< " ";
+        }
+
+    }
+    
 
 
 //10. SORTING +VE ND -VE NUMBERS
@@ -105,6 +133,27 @@ using namespace std;
     // }
 
 
+
+//11.
+    void printExtreme(int arr[], int size){
+        int left=0;
+        int right= size-1;
+
+        while(left <= right){
+
+            if(left == right){
+                cout<< arr[left]<< endl;
+            }
+            else{
+                cout<< arr[left]<< endl;
+                cout<< arr[right] << endl;
+            }
+
+            //UPDATE LEFT AND RIGHT
+            left++;
+            right--;
+        } 
+    }
 
 int main(){
 
@@ -139,15 +188,15 @@ int main(){
     
 
 //2b. PRINT TRIPLETS
-    int n=4;
-    int arr[]= {1,2,3,4};
-    for(int i=0; i<n;i++){
-        for(int j=0; j<n; j++){
-            for(int k=0; k<n; k++){
-                cout<< arr[i] <<", " <<arr[j] <<", "<< arr[k] << endl;
-            }
-        }
-    }
+    // int n=4;
+    // int arr[]= {1,2,3,4};
+    // for(int i=0; i<n;i++){
+    //     for(int j=0; j<n; j++){
+    //         for(int k=0; k<n; k++){
+    //             cout<< arr[i] <<", " <<arr[j] <<", "<< arr[k] << endl;
+    //         }
+    //     }
+    // }
     
 
 
@@ -196,15 +245,15 @@ int main(){
 
 
 //7.SHIFT ARRAY ELEMENT BY 1
-//    int arr[]={10,20,30,40,50,60};
-//    int n=6;
+    // int arr[]={10,20,30,40,50,60};
+    // int n=6;
 
-//    shiftArray(arr, n);
+    // shiftArray(arr, n);
 
-//    //print
-//    for(int i=0; i<n;i++) {
-//      cout<< arr[i]<< " "<< endl;
-//    }
+    // //print
+    // for(int i=0; i<n; i++) {
+    //     cout<< arr[i]<< "  "<< endl;
+    // }
 
 
 //8.
@@ -222,6 +271,14 @@ int main(){
 
 
 
+//9.
+// int arr[7]={10,20,30,40,50,60,70};
+//     int n=7;
+
+//     reverseArray(arr, n);
+
+
+
 //10.
     // int arr[]={23,-7,12,-10,-11,40,60};
     // int n=7;
@@ -231,6 +288,14 @@ int main(){
     // for(int i=0; i<n; i++){
     //     cout<< arr[i] << " ";
     // }
+
+
+
+//11. PRINT EXTREMES
+    int arr[6]={10,20,30,40,50,60};
+    int size= 6;
+
+    printExtreme(arr, size);
 
 return 0;
 }
