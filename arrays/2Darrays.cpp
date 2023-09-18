@@ -5,15 +5,15 @@ using namespace std;
 
 
 //1.
-    void printArray(int arr[][4], int row, int col){
-        for(int i=0; i<row; i++){
-            for(int j=0; j<col; j++){
-                cout<< arr[i][j]<< " ";
-            }cout<< endl;
+    // void printArray(int arr[][4], int row, int col){
+    //     for(int i=0; i<row; i++){
+    //         for(int j=0; j<col; j++){
+    //             cout<< arr[i][j]<< " ";
+    //         }cout<< endl;
             
-        } 
+    //     } 
     
-    }
+    // }
 
     //1. void colwiseprint(int brr[][4], int row, int col){
     //     for(int i=0; i<col; i++){
@@ -80,15 +80,25 @@ using namespace std;
     // }
 
 
-//9. TRAnsposing
-    // void transpose(int arr[][4], int row, int col){
-    // for(int i=0; i<row; i++){
-    //     for(int j=i; j<col ; j++){
-    //          swap(arr[i][j], arr[j][i]);
-    //     }
-    // }
+//
+void printArray( int arr[][3], int row, int col){
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            cout<< arr[i][j] <<" ";
+        }
+        cout<< endl;
+    }
+}
 
-    //  }
+//9. TRAnsposing
+    void afterTranpose(int arr[][3], int row, int col){
+        for(int i=0; i<row; i++){
+            for(int j=i; j<col; j++){
+                swap(arr[i][j], arr[j][i]);
+                cout<< arr[j][i]<< " ";
+            }
+        }cout<< endl;
+    }
 
 
 
@@ -188,15 +198,38 @@ int main(){
 
 
 
-//10.VECTOR
-    int arr[5];
-    vector<int> v(5);
-    cout<< "Sizes of vector :"<< v.size();
-    cout<< endl <<"Printing vector"<< endl;
-    for(int i=0; i<v.size(); i++){
-        cout<< v[i] << " ";
+//9.
+    int arr[3][3]={
+        {1,2,3},
+        {4,5,6},
+        {7,8,9},
+    };
 
-    }cout<< endl;
+    int row=3;
+    int col=3;
+
+    //printing before transpose
+    cout<<"Printing before transpose:" << endl;
+    printArray(arr, row, col);
+
+    //TRANSPOSING
+    afterTranpose(arr, row, col);
+    
+    //PRINTING AFTER TRANSPOSE
+    cout<< "Printing after transpos: "<< endl;
+    printArray(arr, row, col);
+
+    
+
+//10.VECTOR
+    // int arr[5];
+    // vector<int> v(5);
+    // cout<< "Sizes of vector :"<< v.size();
+    // cout<< endl <<"Printing vector"<< endl;
+    // for(int i=0; i<v.size(); i++){
+    //     cout<< v[i] << " ";
+
+    // }cout<< endl;
 
 
     return 0;
