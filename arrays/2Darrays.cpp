@@ -106,6 +106,12 @@ void printArray( int arr[][3], int row, int col){
   
 
 
+//11. BINARY SEARCH IN 2D
+    // bool searMatrix( vector<vector<int>>& matrix, int target){
+
+    //     int row= matrix.size();
+    //     int col = matrix
+    // }
 
 
 
@@ -230,6 +236,11 @@ int main(){
     //     cout<< v[i] << " ";
 
     // }cout<< endl;
+
+
+
+//11. BINARY SEARCH IN 2D ARRAY
+
 
 
     return 0;

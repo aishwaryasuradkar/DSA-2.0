@@ -94,28 +94,28 @@ using namespace std;
 
 
 //9. REVERSING AN ARRAY
-    void reverseArray(int arr[], int size){
-        int left=0;
-        int right= size-1;
+    // void reverseArray(int arr[], int size){
+    //     int left=0;
+    //     int right= size-1;
 
-        while(left<= right){
+    //     while(left<= right){
 
-            swap(arr[left], arr[right]);
-            left++;
-            right--;
+    //         swap(arr[left], arr[right]);
+    //         left++;
+    //         right--;
 
-        }
+    //     }
 
-        // for(int left=0; right= size-1;left<= right,left++, right-- ){
-        //     swap(arr[left], arr[right]);
-        // } 
+    //     // for(int left=0; right= size-1;left<= right,left++, right-- ){
+    //     //     swap(arr[left], arr[right]);
+    //     // } 
 
-        //printing array
-        for(int i=0; i<size; i++){
-            cout<< arr[i]<< " ";
-        }
+    //     //printing array
+    //     for(int i=0; i<size; i++){
+    //         cout<< arr[i]<< " ";
+    //     }
 
-    }
+    // }
     
 
 
@@ -135,25 +135,101 @@ using namespace std;
 
 
 //11.
-    void printExtreme(int arr[], int size){
-        int left=0;
-        int right= size-1;
+    // void printExtreme(int arr[], int size){
+    //     int left=0;
+    //     int right= size-1;
 
-        while(left <= right){
+    //     while(left <= right){
 
-            if(left == right){
-                cout<< arr[left]<< endl;
+    //         if(left == right){
+    //             cout<< arr[left]<< endl;
+    //         }
+    //         else{
+    //             cout<< arr[left]<< endl;
+    //             cout<< arr[right] << endl;
+    //         }
+
+    //         //UPDATE LEFT AND RIGHT
+    //         left++;
+    //         right--;
+    //     } 
+    // }
+
+
+
+//12.
+//     int findPivotIndex(int arr[], int size) {
+//     int s = 0;
+//     int e = size - 1;
+
+//     while (s <= e) {
+//         // If the current segment has only one element, it is the pivot
+//         if (s == e) {
+//             return s;
+//         }
+
+//         int mid = s + (e - s) / 2;
+
+//         // Check if mid is the pivot
+//         if (arr[mid] > arr[mid + 1]) {
+//             return mid;
+//         }
+//         if (arr[mid] < arr[mid - 1]) {
+//             return mid - 1;
+//         }
+//         if (arr[s] > arr[mid]) {
+//             //left la ja
+//             e = mid - 1;
+//         }
+//         else {
+//             // right la ja
+//             s = mid + 1;
+//         }
+//     }
+
+//     return -1; // No pivot element found
+// }
+
+//13.
+
+
+//14.
+    // int search(vector<int> &nums, int target){
+    //     int pivotIndex = findPivotIndex(nums);
+
+
+    //     //search in A
+    //     if( target >= arr[0] && target <= arr[pivot])
+    // }
+
+
+//15.FIND SQUARE ROOT
+
+    int mySquareRoot( int x){
+        int s=0;
+        int e=x;
+        long long int mid = s+(e-s)/2;
+
+        while(s <= e){
+            //kya mid hi to ans nahi
+            if(mid*mid==x){
+                return mid;
+            }
+            else if(mid*mid < x){
+                //right la ja
+                int ans= mid;
+                s=mid+1;
             }
             else{
-                cout<< arr[left]<< endl;
-                cout<< arr[right] << endl;
+                //left la ja
+                e= mid+1;
             }
+            mid= s+(e-s)/2;
+}    
+}
 
-            //UPDATE LEFT AND RIGHT
-            left++;
-            right--;
-        } 
-    }
+
+
 
 int main(){
 
@@ -292,10 +368,29 @@ int main(){
 
 
 //11. PRINT EXTREMES
-    int arr[6]={10,20,30,40,50,60};
-    int size= 6;
+    // int arr[6]={10,20,30,40,50,60};
+    // int size= 6;
 
-    printExtreme(arr, size);
+    // printExtreme(arr, size);
+
+
+
+//12.PIVOT ELEMENT
+    // int arr[8]= {12,14,16,2,4,6,8,10};
+    // int size=8;
+
+    // int pivotIndex= findPivotIndex(arr, size);
+    // cout<< "Pivot Element is: " << pivotIndex << endl;
+
+
+//13.
+
+
+
+
+//15.FIND SQUARE ROOT
+
+
 
 return 0;
 }
