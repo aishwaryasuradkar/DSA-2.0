@@ -1,6 +1,17 @@
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
+
+
+//1.
+    void findSubString(char ch, int n){
+        int index=0;
+        
+    }
+
+
+
 
 int main(){
 
@@ -127,10 +138,22 @@ int main(){
     // }
     
 
-    string str1 = "This is a car, big daddy of all suvs";
-    cout << str1.substr(19,5) << endl;
+    // string str1 = "This is a car, big daddy of all suvs";
+    // cout << str1.substr(19,5) << endl;
 
 
+//1.REMOVE ALL OCCURANCES OF A SUBSTRING
+    string str="Babbar";
+    for(auto ch:str){
+        cout<< ch << " ";
+    }
+    cout<< endl;
+
+
+// vector<int>v;
+// v.push_back(2);
+// v.push_back(8);
+// v.push_back(10);
 
 
     return 0;
