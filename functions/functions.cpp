@@ -105,7 +105,64 @@ using namespace std;
     // }
 
 
+//11. FIND AREA OF CIRCLE
+    float findAreaOfCircle( float r){
+        float area;
+        area = (3.14 * r *r);
+        return area;
+    }
 
+
+
+
+//12.EVEN OR ODD
+    bool EvenOrOdd(int n){
+         if(/*n%2 == 0*/ (n & 1 == 0)){
+           return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+//13.FACTORIAL
+    long long int findFactorial(long long int n){
+        long long int fact = 1;
+        for(int i=1; i<=n; i++){
+            fact = (fact * i);
+        }
+        return fact;
+    }
+
+
+//14. PRIME OR NOT
+    bool primeOrNot(int n){
+        for(int i=2; i<n; i++){
+            if(n%i == 0){
+               return true;
+            }
+            else{
+                return false;
+            }
+        }
+    }
+
+
+//15.
+    bool checkPrime(int n){
+        if(n<=1){
+            return false;
+        
+        int i=2;
+        for(int i=2; i<n; i++){
+            if(n%i == 0){
+               return false;
+            }
+        }
+        return true;
+    }
+    }
 
    int main(){
 
@@ -153,5 +210,72 @@ using namespace std;
     // else{
     //     cout<<"Its not a prime no.";
     // }
+
+
+//11. CALCULATE AREA OF CIRCLE
+    // int radius;
+    // cout<< "Enter the radius: ";
+    // cin>> radius;
+
+    // float areaOfCircle = findAreaOfCircle( radius);
+    // cout << "Area of circle is:" << areaOfCircle << endl;
+
+
+
+//12.EVEN OR ODD
+    // int n;
+    // cout<<"Enter a number:" ;
+    // cin>>n;
+
+    // bool  IsEven = EvenOrOdd(n);
+
+    // if(IsEven){
+    //     cout<<"An even number"<< endl;
+    // }
+    // else{
+    //     cout<< "An odd number"<< endl;
+    // }
+
+
+//13.FACTORIAL
+    // int n;
+    // cout<<"Enter a number: ";
+    // cin>> n;
+
+    // int fact = findFactorial(n);
+    // cout << "The factorial of " << n << " is: " << fact << endl;
+
+
+
+//14. PRIME OR NOT
+    // int n;
+    // cout<< "Enter a number:";
+    // cin>> n;
+
+    // int IsPrime = primeOrNot(n);
+    // if(IsPrime){
+    //     cout<< "Not a prime number" << endl;
+    //  }
+    // else{
+    //     cout<<"A prime number" << endl;
+    // }
+    
+
+
+//15. PRINT ALL PRIME FROM 1 TO N
+    int n;
+    cout<< "Enter a number:";
+    cin>> n;
+
+    for( int i=2; i<=n; i++){
+        bool IsPrime = checkPrime(i);
+        if(IsPrime){
+            cout<< i << " ";
+        }
+
+    }
+   
+
+
 
    }
