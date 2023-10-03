@@ -60,6 +60,27 @@ using namespace std;
     // } 
 
 
+//6a.SORT 0 AND 1
+        void countZeroOne(int arr[], int size){
+        int zerocount=0;
+        int onecount=0;
+
+        for(int i=0; i<size; i++){
+            if(arr[i]== 0){
+                zerocount++;
+            }
+            if( arr[i] == 1){
+                onecount++;
+            }
+        
+        //step 2- place all 0's first
+        for(int i=0; i<zerocount; i++){
+            arr[i] = 0;
+        }
+
+
+    }
+}
 
 //7. RIGHT SHIFT
     // void shiftArray(int arr[], int n){
@@ -83,7 +104,7 @@ using namespace std;
     //     //store ans
     //     int minAns= INT_MAX;
     //     for(int i=0; i<size; i ++){
-    //         if(arr[i]< minAns){
+    //         if(arr[i] < minAns){
     //             minAns= arr[i];
     //         }
             
@@ -91,6 +112,16 @@ using namespace std;
     //     return minAns;
     // }
 
+//8.a
+    int findMAx(int arr[], int size){
+        int maxno = INT_MIN;
+        for(int i=0; i<size; i++){
+            if(arr[i] > maxno){
+               maxno = arr[i];
+            }
+        }
+        return maxno;
+    }
 
 
 //9. REVERSING AN ARRAY
@@ -134,7 +165,7 @@ using namespace std;
 
 
 
-//11.
+//11.EXTREME PRINT IN AN ARRAY 
     // void printExtreme(int arr[], int size){
     //     int left=0;
     //     int right= size-1;
@@ -339,19 +370,22 @@ int main(){
     // //value of 2 to the power 31 - 1
     // cout<< INT_MAX<< endl;
 
-    // int arr[]={10,8,31,4,3,1,51};
-    // int size=7;
+    int arr[]={10,8,31,4000,3,1,51};
+    int size=7;
 
     // int min = findMin(arr, size);
     // cout<< "Minimum number is:" << min<< endl;
+    //max no
+    int max = findMAx(arr, size);
+    cout<< "Maximun no is: " << max << endl;
 
 
 
-//9.
-// int arr[7]={10,20,30,40,50,60,70};
-//     int n=7;
+//9.REVERSE AN ARRAY
+    // int arr[7]={10,20,30,40,50,60,70};
+    //     int n=7;
 
-//     reverseArray(arr, n);
+    //     reverseArray(arr, n);
 
 
 
