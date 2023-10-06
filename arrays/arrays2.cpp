@@ -80,7 +80,7 @@ using namespace std;
 
 
     }
-}
+ }
 
 //7. RIGHT SHIFT
     // void shiftArray(int arr[], int n){
