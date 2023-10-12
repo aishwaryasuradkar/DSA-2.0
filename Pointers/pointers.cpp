@@ -35,10 +35,19 @@ int main(){
 
 
 
-//4. ACCESSING BUT A BAD PRACTICE
-    int* ptr;
-    cout<< *ptr << endl; 
+//4. ACCESSING ptr which is A BAD PRACTICE
+    // int* ptr;
+    // cout<< *ptr << endl;// runtime error dega //random memory ko access karega
 
+    //how to solve
+    // i will create a null pointer
+    // int* ptr = 0;
+    // cout << *ptr << endl; //helps while debugging
+
+
+
+//5.
+    
 
 
 
