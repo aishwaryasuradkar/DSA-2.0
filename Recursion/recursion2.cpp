@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 
@@ -61,10 +62,28 @@ using namespace std;
 
 
 
+//3. Derengemarnt no numbers
+    //
 
 
 
+//4. find number of ways you can paint n posts
+    int getPaintWays(int n, int k){
+        //bae case
+        if(n == 1){
+            return k;
+           
+        }
+        if(n ==2 ){
+            return k*(k-1);
+        }
 
+    int ans = (k-1) * (getPaintWays(n-1,k) + getPaintWays(n-1,k));
+    return ans;
+    }
+
+
+//5. Edit distance
 
 
 
@@ -86,20 +105,27 @@ int main(){
 
 
 //2.
-    int arr[] = {10,20,30,40,50,60,70,80};
-    int size = 8;
-    int s = 0;
-    int e = size-1;
-    int target = 60;
+    // int arr[] = {10,20,30,40,50,60,70,80};
+    // int size = 8;
+    // int s = 0;
+    // int e = size-1;
+    // int target = 60;
 
-    int found = binarySearch(arr, s, e, target);
-    if(found != -1){
-        cout <<"Target found at " << found << "th index"<< endl;
-    }
-    else{
-        cout <<"Target not found" << endl;
-    }
+    // int found = binarySearch(arr, s, e, target);
+    // if(found != -1){
+    //     cout <<"Target found at " << found << "th index"<< endl;
+    // }
+    // else{
+    //     cout <<"Target not found" << endl;
+    // }
 
 
+
+
+//4.
+    int n = 3;
+    int k = 3;
+    int ans = getPaintWays(n,k);
+    cout << ans << endl;
      
 }
